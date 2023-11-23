@@ -1,12 +1,15 @@
+import { Invitation } from "./Invitation";
 import { Ticket } from "./Ticket";
 
 export class Bag {
-  private amount;
-  private invitation;
-  private ticket;
+  private amount: number;
+  private invitation: Invitation | null;
+  private ticket: Ticket | null;
 
-  constructor(amount) {
+  constructor(invitation: Invitation | null, amount: number) {
+    this.invitation = invitation;
     this.amount = amount;
+    this.ticket = null;
   }
 
   hold(ticket: Ticket) {
@@ -19,16 +22,8 @@ export class Bag {
     return ticket.getFee();
   }
 
-  public Bag(invitation, amount) {
-    this.invitation = invitation;
-    this.amount = amount;
-  }
   private hasInvitation() {
     return this.invitation !== null;
-  }
-
-  private hasTicket() {
-    return this.ticket !== null;
   }
 
   private setTicket(ticket) {
@@ -37,9 +32,5 @@ export class Bag {
 
   private minusAmount(amount) {
     this.amount -= amount;
-  }
-
-  private plusAmount(amount) {
-    this.amount += amount;
   }
 }

@@ -1,20 +1,21 @@
 import { Audience } from "./Audience";
+import { Ticket } from "./Ticket";
 
 export class TicketOffce {
-  private amount;
-  private ticekts;
+  private amount: number;
+  private ticekts: Ticket[];
 
-  constructor(amount, tickets) {
+  constructor(amount: number, tickets: Ticket[]) {
     this.amount = amount;
     this.ticekts = tickets;
   }
 
-  public getTicket() {
-    return this.ticekts[0];
-  }
-
-  minusAmount(amount) {
-    this.amount -= amount;
+  public getTicket(): Ticket {
+    const ticket = this.ticekts.shift();
+    if (!ticket) {
+      throw new Error("티켓 매진");
+    }
+    return ticket;
   }
 
   plustAmount(amount) {
