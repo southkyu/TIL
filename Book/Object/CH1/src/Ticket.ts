@@ -1,5 +1,5 @@
 export class Ticket {
-  private fee;
+  private fee: number;
 
   constructor(fee: number) {
     this.fee = fee;
