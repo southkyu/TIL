@@ -11,6 +11,8 @@
 - [01. 이벤트루프](./Javascript//01.%20JS%20Core%20-%20이벤트루프.md)
 - [02. 호이스팅](./Javascript/02.%20JS%20Core%20-%20호이스팅.md)
 - [03. 스코프](./Javascript/03.%20JS%20Core%20-%20스코프.md)
+- [04. 자바스크립트엔진](./Javascript/04.JS%20Core%20-%20자바스크립트%20엔진.md)
+- [05. 프로토타입과 상속](./Javascript/05.%20JS%20Core%20-%20프로토타입과%20상속.md)
 
 ### React
 
